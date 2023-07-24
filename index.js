@@ -6,7 +6,7 @@ let emails = []
 fs.createReadStream("./input.csv")
 	.pipe(csvParser())
 	.on("data", function (row) {
-		console.log('row', row);
+		// console.log('row', row);
 
 		// build name and email list here
 		names.push(row.Name);
@@ -40,6 +40,6 @@ fs.createReadStream("./input.csv")
 		for (let i = 0; i < emails.length; i++) {
 			console.log(`${emails[i]} -> ${shuffledEmails[i]}`);
 		}
-		console.log("finished");
+		// console.log("finished");
 	});
 
